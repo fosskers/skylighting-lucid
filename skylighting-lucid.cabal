@@ -1,7 +1,9 @@
 cabal-version:      2.0
 name:               skylighting-lucid
 version:            1.0.0
+synopsis:           Lucid support for Skylighting
 description:        Lucid support for Skylighting
+category:           Web
 homepage:           https://github.com/fosskers/skylighting-lucid
 author:             Colin Woodbury
 maintainer:         colin@fosskers.ca
