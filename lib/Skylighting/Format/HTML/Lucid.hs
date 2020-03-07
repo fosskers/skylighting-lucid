@@ -66,7 +66,7 @@ formatHtmlBlock opts ls =
   $ pre_ [classes_ classes]
     $ wrapCode opts
     $ mconcat
-    -- $ L.intersperse (toHtml "\n")
+    $ L.intersperse "\n"
     $ zipWith (sourceLineToHtml opts) [startNum..] ls
   where
     classes :: [T.Text]
