@@ -1,4 +1,4 @@
-name: Build
+name: Tests
 on:
   pull_request:
   push:
@@ -10,14 +10,17 @@ jobs:
     name: CI
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Stack
-        uses: mstksg/setup-stack@v1
+      - name: Setup GHC
+        uses: actions/setup-haskell@v1.1.4
+        with:
+          ghc-version: "8.10.4"
+          enable-stack: true
 
       - name: Clone project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.5
         with:
           path: ~/.stack
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml') }}
@@ -25,4 +28,4 @@ jobs:
             ${{ runner.os }}-
 
       - name: Build and run tests
-        run: "stack test --fast --no-terminal"
+        run: "stack test --fast --no-terminal --system-ghc"
