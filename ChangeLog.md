@@ -1,5 +1,11 @@
 # Changelog for skylighting-lucid
 
+## 1.0.2 (2022-05-23)
+
+#### Changed
+
+- Bumped dependencies.
+
 ## 1.0.1 (2021-04-14)
 
 #### Changed
