@@ -1,6 +1,6 @@
 cabal-version:      2.0
 name:               skylighting-lucid
-version:            1.0.3
+version:            1.0.4
 synopsis:           Lucid support for Skylighting
 description:        Lucid support for Skylighting
 category:           Web
@@ -26,7 +26,7 @@ library
       base              >=4.7 && <5
     , containers
     , lucid             >=2.9 && < 2.12
-    , skylighting-core  >=0.8 && < 0.14
+    , skylighting-core  >=0.8 && < 0.15
     , text
 
   exposed-modules:  Skylighting.Format.HTML.Lucid
